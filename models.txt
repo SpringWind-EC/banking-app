@@ -1,0 +1,17 @@
+Customers
+id, name, username, password(hash), email
+
+Employees
+id, name, username, password(hash)
+
+Bank accounts
+id, customerId, type, acc_number, balance, status, created at
+
+Transactions
+id, timestamp, amount, Transaction Type, source_acc_id, dest_acc_id, resulting balance, sourceBalanceAfter, destinationBalanceAfter, initiated By EmployeeId
+
+Account notes
+id, acc_id, transaction_id (optional), employee_id category, note, created_at, tags
+
+Activity log entries
+id, employeeId, actionType, affected accountId or customerId, details, createdAt
