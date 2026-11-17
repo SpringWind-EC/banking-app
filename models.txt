@@ -11,7 +11,7 @@ Transactions
 id, timestamp, amount, Transaction Type, source_acc_id, dest_acc_id, resulting balance, sourceBalanceAfter, destinationBalanceAfter, initiated By EmployeeId
 
 Account notes
-id, acc_id, transaction_id (optional), employee_id category, note, created_at, tags
+id, acc_id, employee_id, category, text , created_at, transaction_id (optional),  tags/flags
 
 Activity log entries
-id, employeeId, actionType, affected accountId or customerId, details, createdAt
+id, employeeId, actionType, affected accountId or customerId,  createdAt, details

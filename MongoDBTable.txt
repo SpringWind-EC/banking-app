@@ -1,0 +1,22 @@
+account_notes
+| Field | BSON type | Required |
+|---|---|---|
+| `_id` | ObjectId | Yes |
+| `accountId` | Int64 | Yes.|
+| `employeeId` | Int64 | Yes. |
+| `category` | String | Yes |
+| `text` | String | Yes |
+| `createdAt` | Date | Yes |
+| `relatedTransactionId` | Int64 | For wire transfer notes. Optional otherwise |
+| `tags` | Array of strings | No |
+
+activity_logs
+| Field | BSON type | Required |
+|---|---|---|
+| `_id` | ObjectId | Yes |
+| `employeeId` | Int64 | Yes. |
+| `actionType` | String | Yes |
+| `accountId` | Int64 | For account-level actions |
+| `customerId` | Int64 | For customer-level actions |
+| `occurredAt` | Date | Yes |
+| `details` | Document | Yes. |
