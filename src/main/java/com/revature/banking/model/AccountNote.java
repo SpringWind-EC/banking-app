@@ -10,12 +10,13 @@ public class AccountNote {
     String category;
     String text;
     Instant createdAt;
-    long relatedTransactionId;
-    String[] tags;
+    Long relatedTransactionId;
+    List<String> tags;
+    boolean flag;
 
     public AccountNote(long accountId, long employeeId, String category,
             String text, Instant createdAt, Long relatedTransactionId,
-            String[] tags) {
+            List<String> tags, boolean flag) {
 
         this.accountId = accountId;
         this.employeeId = employeeId;
@@ -23,7 +24,8 @@ public class AccountNote {
         this.text = text;
         this.createdAt = createdAt;
         this.relatedTransactionId = relatedTransactionId;
-        this.tags = tags;
+        this.tags = new ArrayList<>(tags);
+        this.flag = flag;
     }
 
     public long getAccountId() {
@@ -66,19 +68,27 @@ public class AccountNote {
         this.createdAt = createdAt;
     }
 
-    public long getRelatedTransactionId() {
+    public Long getRelatedTransactionId() {
         return relatedTransactionId;
     }
 
-    public void setRelatedTransactionId(long relatedTransactionId) {
+    public void setRelatedTransactionId(Long relatedTransactionId) {
         this.relatedTransactionId = relatedTransactionId;
     }
 
-    public String[] getTags() {
+    public List<String> getTags() {
         return tags;
     }
 
-    public void setTags(String[] tags) {
-        this.tags = tags;
+    public void setTags(List<String> tags) {
+        this.tags = (tags == null ? new ArrayList<>() : new ArrayList<>(tags));
+    }
+
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
     }
 }

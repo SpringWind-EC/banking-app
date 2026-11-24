@@ -3,17 +3,6 @@ package com.revature.banking.model;
 import java.time.*;
 import java.util.*;
 
-// activity_logs
-// | Field | BSON type | Required |
-// |---|---|---|
-// | `_id` | ObjectId | Yes |
-// | `employeeId` | Int64 | Yes. |
-// | `actionType` | String | Yes |
-// | `accountId` | Int64 | For account-level actions |
-// | `customerId` | Int64 | For customer-level actions |
-// | `occurredAt` | Date | Yes |
-// | `details` | Document | Yes. |
-
 public class ActivityLog {
     long employeeId;
     String actionType;

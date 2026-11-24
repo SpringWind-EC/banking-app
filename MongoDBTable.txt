@@ -1,4 +1,4 @@
-account_notes
+accountNote
 | Field | BSON type | Required |
 |---|---|---|
 | `_id` | ObjectId | Yes |
@@ -9,6 +9,7 @@ account_notes
 | `createdAt` | Date | Yes |
 | `relatedTransactionId` | Int64 | For wire transfer notes. Optional otherwise |
 | `tags` | Array of strings | No |
+| `flag` | boolean | yes |
 
 activity_logs
 | Field | BSON type | Required |

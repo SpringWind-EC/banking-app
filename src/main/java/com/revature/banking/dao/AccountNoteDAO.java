@@ -1,5 +1,7 @@
 package com.revature.banking.dao;
 
-public interface AccountNoteDAO {
+import com.revature.banking.model.AccountNote;
 
+public interface AccountNoteDAO {
+    String createAccountNote(AccountNote accountNote);
 }
